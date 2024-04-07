@@ -2,7 +2,7 @@
 
 library(ggplot2)
 
-# data: copy paste in kwrite Anno, Km. Min.
+# data: copy paste in kwrite Anno, Km. Min. (second sheet)
 res <- read.table("clipboard", sep="\t", h=T)
 pairs(res) 
 
