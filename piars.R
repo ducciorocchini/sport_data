@@ -2,6 +2,10 @@
 
 library(ggplot2)
 
+# Steps:
+# import data - copy paste in kwrite Anno, Km. Min. 
+# change f.Velo
+
 # data: copy paste in kwrite Anno, Km. Min. (second sheet)
 res <- read.table("clipboard", sep="\t", h=T)
 pairs(res) 
@@ -21,4 +25,6 @@ ggplot(res, aes(x=res[[1]], y=res[[2]])) +
     labs(y = "Km. min.") +
     geom_point(aes(x=f.Anno,y=f.Velo),colour="red",size=5)
 
-
+# hist
+hist(res[[2]], xlab="Km. min.")
+abline(v=f.Velo, col="red") 
