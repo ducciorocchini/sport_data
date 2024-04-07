@@ -10,16 +10,15 @@ plot(res[[1]], res[[2]])
 
 # focus data
 f.Anno <- 1974
-f.Velo <- 5.39
-points(f.Anno, f.Velo, pch=19)
+# f.Velo <- 5.39 # march 24th
+f.Velo <- 6.16 # april 7th
 
 # ggplot
-ggplot(res, aes(x=res[[1]], y=res[[2]]), xlab("Anno di nascita"), ylab("Km. min."), pch=19) +
+ggplot(res, aes(x=res[[1]], y=res[[2]])) +
     geom_point(alpha=0.3) + 
-    scale_size_manual(values=2)
-    
-points(f.Anno, f.Velo, pch=19, col="red")
+    scale_size_manual(values=2) + 
+    labs(x = "Anno di nascita") +
+    labs(y = "Km. min.") +
+    geom_point(aes(x=f.Anno,y=f.Velo),colour="red",size=5)
 
-# apr 7th
-f.Velo <- 6.04
 
