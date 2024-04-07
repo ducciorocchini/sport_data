@@ -20,3 +20,6 @@ ggplot(res, aes(x=res[[1]], y=res[[2]]), xlab("Anno di nascita"), ylab("Km. min.
     
 points(f.Anno, f.Velo, pch=19, col="red")
 
+# apr 7th
+f.Velo <- 6.04
+
